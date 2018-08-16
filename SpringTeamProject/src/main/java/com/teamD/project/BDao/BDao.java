@@ -52,6 +52,7 @@ public class BDao {
 			@Override
 			public void setValues(PreparedStatement pstmt) throws SQLException {
 				// TODO Auto-generated method stub
+				System.out.println("myInfo dao");
 				pstmt.setString(1, name);
 				pstmt.setString(2, id);
 				pstmt.setString(3, pwd);

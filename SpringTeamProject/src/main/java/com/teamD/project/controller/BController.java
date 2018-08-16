@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.teamD.project.command.BCommand;
-import com.teamD.project.command.BMyInfoCommand;
 import com.teamD.project.command.BLoginCommand;
+import com.teamD.project.command.BMyInfoCommand;
 import com.teamD.project.command.BRegiCommand;
 import com.teamD.project.util.Constant;
 
@@ -57,20 +57,21 @@ public class BController {
 		return "redirect:index";
 	}
 	
-	@RequestMapping("/myInfo")
+	@RequestMapping("/MyInfo")
 	public String myInfo(HttpServletRequest request, Model model) {
-		System.out.println("myInfo()");
+		System.out.println("MyInfo()");
 		model.addAttribute("request", request);
 		command = new BMyInfoCommand();
 		command.execute(model);
 		return "redirect:index";
 	}
 	
-	@RequestMapping("/list")
+	/*@RequestMapping("/list") 미구현
 	public String list(HttpServletRequest request, Model model) {
 		System.out.println("list()");
 		model.addAttribute("request", request);
-		
+		command = new BListViewCommand();
+		command.execute(model);
 		return "list";
-	}
+	}*/
 }
