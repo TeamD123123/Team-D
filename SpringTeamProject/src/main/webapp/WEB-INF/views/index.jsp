@@ -101,7 +101,17 @@
     	    transitionClose: 'slideBack'
     	})
     })
+    $('.MyInfo').find('a').on('click', function(e){
+    	e.preventDefault();
+
+    	bpopup=$('#MyInfoContainer').bPopup({
+        fadeSpeed: 'slow', //can be a string ('slow'/'fast') or int
+              followSpeed: 1000, //can be a string ('slow'/'fast') or int
+              modalColor: 'rgba(0,0,0,0.5)'
+    	})
+    })
   })
+  
   $(document).ready(function(){
     $('.sub-menu').hide();
 
@@ -288,6 +298,36 @@
           </div>
         </div>
   	</section>
-
+<!-- myInfo pwd check-->
+<section>
+  <div id="MyInfoContainer" style="display: none;">
+      <div class="MyInfo-left-col">
+        <h1>My Account</h1>
+        <div class="MyInfo-area">
+        <form method="post" action="MyInfo">
+        <input type="hidden" name="actionName" value="MyInfo">
+          <div class="name-bar">
+            <input type="text" placeholder="Name" name= "mName" maxlength="30">
+          </div>
+          <div class="id-bar">
+            <input type="text" placeholder="ID" name= "mId" maxlength="30">
+          </div>
+          <div class="password-bar">
+            <input type="password" placeholder="Password"name="mPwd" maxlength="30">
+          </div>
+          <div class="email-bar">
+            <input type="email" placeholder="xxxx@xxx.xxx"name="mEmail" maxlength="30">
+          </div>
+          <div class="MyInfo-button">
+            <input type=submit value="UPDATE">
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="MyInfo-right-col">
+        <img src="resources/img/myInfo.jpg" width="100%" height="100%">
+      </div>
+    </div>
+</section>
 </body>
 </html>

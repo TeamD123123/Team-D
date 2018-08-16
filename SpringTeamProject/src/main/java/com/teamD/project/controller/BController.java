@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.teamD.project.command.BCommand;
+import com.teamD.project.command.BMyInfoCommand;
 import com.teamD.project.command.BLoginCommand;
 import com.teamD.project.command.BRegiCommand;
 import com.teamD.project.util.Constant;
@@ -46,13 +47,30 @@ public class BController {
 		command = new BLoginCommand();
 		command.execute(model);
 		return "redirect:index";
-	}@RequestMapping("/logout")
+	}
+	
+	@RequestMapping("/logout")
 	public String logout(HttpServletRequest request) {
 		System.out.println("logout()");
 		HttpSession session = request.getSession();
-		
-		
 		session.invalidate();
 		return "redirect:index";
+	}
+	
+	@RequestMapping("/myInfo")
+	public String myInfo(HttpServletRequest request, Model model) {
+		System.out.println("myInfo()");
+		model.addAttribute("request", request);
+		command = new BMyInfoCommand();
+		command.execute(model);
+		return "redirect:index";
+	}
+	
+	@RequestMapping("/list")
+	public String list(HttpServletRequest request, Model model) {
+		System.out.println("list()");
+		model.addAttribute("request", request);
+		
+		return "list";
 	}
 }

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementSetter;
 
 import com.teamD.project.BDto.BDto;
 import com.teamD.project.command.BCommand;
@@ -38,12 +39,25 @@ public class BDao {
 		});
 	}
 	public BDto login(String id, String pwd) {
-		String sql= "select * from member where id = "+"'" + id+"'";
+		String sql = "select * from member where id = "+"'" + id+"'";
 		return template.queryForObject(sql, new BeanPropertyRowMapper<BDto>(BDto.class));
 //		String sql= "select pwd from member where id = ?";
 //		String passwd = template.queryForObject(sql, new Object[] { id }, String.class);
 //		System.out.println("password = " + passwd);
 //		return null;
 	}
-	
+	public void myInfo(final String name, final String id, final String pwd, final String email, final String Sid) {
+		String sql = "update member set name = ?, id = ?, pwd = ?, email = ? where id = ?";
+		template.update(sql, new PreparedStatementSetter() {
+			@Override
+			public void setValues(PreparedStatement pstmt) throws SQLException {
+				// TODO Auto-generated method stub
+				pstmt.setString(1, name);
+				pstmt.setString(2, id);
+				pstmt.setString(3, pwd);
+				pstmt.setString(4, email);
+				pstmt.setString(5, Sid);
+			}
+		});
+	}
 }
