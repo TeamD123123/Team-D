@@ -13,7 +13,9 @@ $(document).ready(() => {
 		if(pwd1==pwd2){
 			result.html('비밀번호가 같습니다.');
 			submitBtn.removeAttr('disabled');
-		}else{
+		}else if(pwd2==''){
+			result.html('');
+		}else if(pwd != pwd2){
 			result.html('비밀번호가 다릅니다.');
 			submitBtn.attr('disabled', 'disabled');
 		}
