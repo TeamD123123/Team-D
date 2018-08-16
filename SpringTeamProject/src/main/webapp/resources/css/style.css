@@ -1,0 +1,341 @@
+/*<!-- header -->*/
+#wrap{
+  height: auto;
+  width: 100%;
+
+}
+#header{
+  width: 100%;
+}
+#content{
+ height: 100%;
+ width: 100%;
+}
+#footer{
+  height: 300px;
+  width: 100%;
+  background-color: #252425;
+  overflow:hidden;
+}
+
+/*<!-- header -->*/
+#my-slider{
+  position : relative;
+  overflow : hidden;
+}
+
+#topMenu{
+  overflow: hidden;
+  position : absolute;
+  top : 10px;
+  left : 10px;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  transition: all .5s ease;
+  z-index: 1;
+}
+#topMenu .teamlogo{
+  margin-left: 20px;
+  float: left;
+}
+#topMenu .teamlogo > a {
+  color : #fff;
+}
+#topMenu .headerMenu{
+  width: 150px;
+  float: right;
+  margin-right: 20px;
+}
+
+#topMenu .headerMenu i{
+  float: right;
+  margin-top: 25px;
+  font-size: 30px;
+  color : #fff;
+}
+#topMenu > .teamlogo > h1{
+  color : #fff;
+  list-style: none;
+
+}
+#topMenu > .teamlogo > a{
+  text-decoration: none;
+}
+.teamlogo{
+  font-family: 'Knewave', cursive;
+}
+#topMenu > .headerMenu > i{
+  color : #fff;
+  transition: all .5s ease;
+}
+#topMenu > .headerMenu > .sign-in{
+  margin-right: 50px;
+}
+
+
+/*content*/
+
+.squareContent{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.squareContent .square{
+  width: 25%;
+  height: 350px;
+  float:left;
+  position: relative;
+}
+.squareContent .square:hover .img-cover{
+  opacity: 1;
+}
+.squareContent .square .img-cover{
+  position: absolute;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+  height : 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all .4s ease;
+}
+.squareContent .square > h1{
+  position: absolute;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+  text-align: center;
+  margin-top : 25%;
+  color : #fff;
+}
+.squareContent .square > h4{
+  position: absolute;
+  top : 0px;
+  left : 0px;
+  width : 100%;
+  text-align: center;
+  margin-top : 40%;
+  color : #fff;
+}
+.squareContent .square img{
+  width:100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+/*content*/
+
+
+
+
+/*footer*/
+.container1 {
+  width: 90%;
+  height: 100%;
+  margin:0 auto;
+  color: white;
+
+}
+#footer .teamInfo{
+  float: left;
+  width: 77.886%;
+  height: 100%;
+  border-right: 2px solid #383838;
+}
+#footer .icons{
+  margin-top: 10%;
+  width: 15%;
+  color: white;
+  float: right;
+  font-size: 30px;
+  letter-spacing: 15px;
+}
+#footer .icons a{
+  color:white;
+  text-decoration: none;
+}
+#footer .icons a:hover > i{
+  font-size: 40px;
+  transition: all .3s ease;
+}
+#footer .teamInfo .logo{
+
+  font-family: 'Knewave', cursive;
+}
+
+/* login */
+#loginContainer{
+  width: 910px;
+  height: 620px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.login-left-col{
+  width: 50%;
+  height: 620px;
+  background-color: red;
+  float: left;
+}
+.login-right-col{
+  width: 50%;
+  height: 620px;
+  float: right;
+  background-color: white;
+}
+.login-right-col h1{
+  font-size: 35px;
+  font-weight:bold;
+  text-align: center;
+  margin-top: 120px;
+}
+.login-right-col .login-area{
+  text-align: center;
+  margin-top: 60px;
+}
+.login-right-col .login-area .id-bar{
+
+}
+.login-right-col .login-area .id-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.login-right-col .login-area .password-bar{
+  margin-top: 20px;
+}
+.login-right-col .login-area .password-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.login-right-col .login-area .login-button{
+  margin-top: 20px;
+}
+.login-right-col .login-area .login-button input{
+  width: 255px;
+  height: 35px;
+  font-size: 14px;
+  letter-spacing: 5px;
+  background-color: #5D5D5D;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.login-right-col .login-area .signUp-button{
+  margin-top: 100px;
+
+}
+.login-right-col .login-area .signUp-button a{
+  color: #5D5D5D;
+  font-weight: bold;
+  font-size: 14px;
+}
+/*signin*/
+/* signIn */
+#signInContainer{
+  width: 910px;
+  height: 620px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.signIn-right-col{
+  width: 50%;
+  height: 620px;
+  background-color: red;
+  float: left;
+}
+.signIn-left-col{
+  width: 50%;
+  height: 620px;
+  float: left;
+  background-color: white;
+}
+.signIn-left-col h1{
+  font-size: 35px;
+  font-weight:bold;
+  text-align: center;
+  margin-top: 100px;
+}
+.signIn-left-col .signIn-area{
+  text-align: center;
+  margin-top: 60px;
+}
+.signIn-left-col .signIn-area .name-bar{
+
+}
+.signIn-left-col .signIn-area .name-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.signIn-left-col .signIn-area .id-bar{
+margin-top: 20px;
+}
+.signIn-left-col .signIn-area .id-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.signIn-left-col .signIn-area .password-bar{
+  margin-top: 20px;
+}
+.signIn-left-col .signIn-area .password-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.signIn-left-col .signIn-area .email-bar{
+  margin-top: 20px;
+}
+.signIn-left-col .signIn-area .email-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.signIn-left-col .signIn-area .gender-bar{
+  margin-top: 20px;
+}
+.signIn-left-col .signIn-area .email-bar input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.signIn-left-col .signIn-area .signUp-button{
+  margin-top: 40px;
+
+}
+.signIn-left-col .signIn-area .signUp-button input{
+  width: 255px;
+  height: 35px;
+  background-color: #5D5D5D;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  letter-spacing: 5px;
+}
