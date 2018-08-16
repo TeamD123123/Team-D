@@ -26,6 +26,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="resources/js/pwdcheck.js"></script>
 <!-- main page script-->
 <script>
   $(document).ready(function(){
@@ -271,10 +272,11 @@
                 <input type="text" placeholder="ID" name= "id" maxlength="30">
               </div>
               <div class="password-bar">
-                <input type="password" placeholder="Password"name="pwd" maxlength="30">
+                <input type="password" id='pwd' placeholder="Password"name="pwd" maxlength="30">
               </div>
               <div class="password-bar">
-                <input type="Password" placeholder="re-password" name="pwd2" maxlength="30">
+                <input type="Password" id="repwd" placeholder="re-password" name="pwd2" maxlength="30">
+                <p id="check-result"></p>
               </div>
               <div class="email-bar">
                 <input type="email" placeholder="xxxx@xxx.xxx"name="email" maxlength="30">
@@ -288,7 +290,7 @@
                 </label>
               </div>
               <div class="signUp-button">
-                <input type=submit value="SIGN UP">
+                <input type=submit value="SIGN UP" disabled="disabled">
               </div>
             </form>
             </div>
@@ -310,7 +312,7 @@
            <label>${sessionID }</label>
           </div>
           <div class="name-bar">
-            <input type="text" placeholder="Id" name= "mName" maxlength="30">
+            <input type="text" placeholder="name" name= "mName" maxlength="30">
           </div>
           <div class="password-bar">
             <input type="password" placeholder="Password"name="mPwd" maxlength="30">
