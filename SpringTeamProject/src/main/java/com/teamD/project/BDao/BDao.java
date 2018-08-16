@@ -46,18 +46,17 @@ public class BDao {
 //		System.out.println("password = " + passwd);
 //		return null;
 	}
-	public void myInfo(final String name, final String id, final String pwd, final String email, final String Sid) {
-		String sql = "update member set name = ?, id = ?, pwd = ?, email = ? where id = ?";
+	public void myInfo(final String name, final String pwd, final String email, final String Sid) {
+		String sql = "update member set name = ?, pwd = ?, email = ? where id = ?";
 		template.update(sql, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement pstmt) throws SQLException {
 				// TODO Auto-generated method stub
 				System.out.println("myInfo dao");
 				pstmt.setString(1, name);
-				pstmt.setString(2, id);
-				pstmt.setString(3, pwd);
-				pstmt.setString(4, email);
-				pstmt.setString(5, Sid);
+				pstmt.setString(2, pwd);
+				pstmt.setString(3, email);
+				pstmt.setString(4, Sid);
 			}
 		});
 	}

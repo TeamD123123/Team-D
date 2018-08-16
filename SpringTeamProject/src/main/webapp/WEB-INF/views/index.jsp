@@ -306,17 +306,17 @@
         <div class="MyInfo-area">
         <form method="post" action="MyInfo">
         <input type="hidden" name="actionName" value="MyInfo">
-          <div class="name-bar">
-            <input type="text" placeholder="Name" name= "mName" maxlength="30">
+        <div class="id-bar">
+           <label>${sessionID }</label>
           </div>
-          <div class="id-bar">
-            <input type="text" placeholder="ID" name= "mId" maxlength="30">
+          <div class="name-bar">
+            <input type="text" placeholder="Id" name= "mName" maxlength="30">
           </div>
           <div class="password-bar">
             <input type="password" placeholder="Password"name="mPwd" maxlength="30">
           </div>
           <div class="email-bar">
-            <input type="email" placeholder="xxxx@xxx.xxx"name="mEmail" maxlength="30">
+            <input type="email" placeholder="email"name="mEmail" maxlength="30">
           </div>
           <div class="MyInfo-button">
             <input type=submit value="UPDATE">

@@ -18,12 +18,11 @@ public class BMyInfoCommand implements BCommand {
 		HttpServletRequest request = (HttpServletRequest)map.get("request");
 		HttpSession session = request.getSession();
 		String name = request.getParameter("mName");
-		String id = request.getParameter("mId");
 		String pwd = request.getParameter("mPwd");
 		String email = request.getParameter("mEmail");
 		String Sid = (String)session.getAttribute("sessionID");
 		System.out.println(Sid);
 		BDao dao = new BDao();
-		dao.myInfo(name, id, pwd, email, Sid);
+		dao.myInfo(name, pwd, email, Sid);
 	}
 }
