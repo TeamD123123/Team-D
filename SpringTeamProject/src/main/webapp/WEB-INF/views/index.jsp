@@ -42,16 +42,19 @@
         $('#topMenu').css('background', '#fff');
         $('#topMenu').find('h1').css('color', 'black');
         $('#topMenu').find('i').css('color', 'black');
+        $('#topMenu').find('a').css('color', 'black');
       }else if(prevScroll==0){
         $('#topMenu').css('position', 'absolute');
         $('#topMenu').find('h1').css('color', 'white');
         $('#topMenu').find('h1').css('color', 'white');
+        $('#topMenu').find('a').css('color', 'white');
       }else{
         $('#topMenu').css('position', 'fixed');
         $('#topMenu').css('z-index', '1');
         $('#topMenu').css('background', 'rgba(0,0,0,0)');
         $('#topMenu').find('h1').css('color', '#fff');
         $('#topMenu').find('i').css('color', 'white');
+        $('#topMenu').find('a').css('color', 'white');
       }
     })
 
@@ -130,6 +133,12 @@
       <div id="topMenu" style="margin : -10px">
         <div class="teamlogo">
           <a href="#"><h1>HotPublace</h1></a>
+        </div>
+        <div class="center-menu">
+        	<a href="#">HOT PLACE</a>
+        	<a href="#">PLACE</a>
+        	<a href="#">RECEIPE</a>
+        	<a href="#">FESTIVAL</a>
         </div>
         <div class="headerMenu">
         	<c:if test="${sessionID == null }">

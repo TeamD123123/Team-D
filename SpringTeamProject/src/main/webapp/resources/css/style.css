@@ -36,6 +36,7 @@
   z-index: 1;
 }
 #topMenu .teamlogo{
+	width: 33%;
   margin-left: 20px;
   float: left;
 }
@@ -43,11 +44,24 @@
   color : #fff;
 }
 #topMenu .headerMenu{
-  width: 150px;
+  width: 30%;
   float: right;
   margin-right: 20px;
 }
-
+#topMenu .center-menu {
+	width: 32%;
+	margin: 0 auto;
+	float: left;
+	margin-top: 30px;
+}
+#topMenu .center-menu a {
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	margin-left: 17px;
+	line-height: 10px;
+}
 #topMenu .headerMenu i{
   float: right;
   margin-top: 25px;
