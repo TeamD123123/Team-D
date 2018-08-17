@@ -135,10 +135,10 @@
           <a href="#"><h1>HotPublace</h1></a>
         </div>
         <div class="center-menu">
-        	<a href="#">HOT PLACE</a>
-        	<a href="#">PLACE</a>
-        	<a href="#">RECEIPE</a>
-        	<a href="#">FESTIVAL</a>
+        	<a href="list_view.jsp">HOT PLACE</a>
+        	<a href="list_view">PLACE</a>
+        	<a href="list?pageInfo=list1">RECEIPE</a>
+        	<a href="list?pageInfo=list1">FESTIVAL</a>
         </div>
         <div class="headerMenu">
         	<c:if test="${sessionID == null }">
@@ -185,7 +185,12 @@
             
 					</div>
 			</div>
-        <div class="squareContent">
+			<!-- squareContent; starting of contents -->
+			<c:if test="${pageInfo == list}">
+				<jsp:include page="list.jsp"/> 
+			</c:if>
+			<c:if test="${pageInfo == index}">
+				<div class="squareContent">
           <div class="square"><img src="resources/img/square1.jpg" alt="">
             <div class="img-cover"></div>
             <h1>HOT PLACE</h1>
@@ -213,6 +218,10 @@
             <img src="resources/img/pic4.jpg" alt="">
           </div>
         </div>
+			</c:if>
+        
+        
+        <!-- squareContent; end of contents -->
     <!-- My Slider -->
         <div id="footer">
           <div class="container1">
